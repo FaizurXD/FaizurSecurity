@@ -27,9 +27,9 @@ export default class {
 
 		const buttons = new ActionRowBuilder<ButtonBuilder>().addComponents(
 			new ButtonBuilder()
-				.setLabel("Top.gg")
+				.setLabel("Vote")
 				.setStyle(ButtonStyle.Link)
-				.setURL("https://top.gg/bot/1008400801628164096"),
+				.setURL("https://faizur.onrender.com/vote"),
 			new ButtonBuilder()
 				.setLabel("Discord Bot List")
 				.setStyle(ButtonStyle.Link)
