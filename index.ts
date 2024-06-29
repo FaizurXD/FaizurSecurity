@@ -98,7 +98,7 @@ const registerEvents = async () => {
 
 const server = Fastify();
 
-server.get("/", async () => "Bot hosting running correctly!");
+server.get("/", async () => "unauthorized!");
 
 try {
 	await loadCommands();
