@@ -20,18 +20,18 @@ export default class {
 		const helpEmbed = new EmbedBuilder({
 			title: `${emojis.list}  Help`,
 			description: `
-Thanks for choosing Pyrite Bot, the future of Discord server security! 
+Thanks for choosing Faizur Util Bot, the future of Discord server security! 
 
 I'm gonna help you keep your server safe from any threats that try ruin your community. 
 
 ${emojis.blank}${emojis.arrow} To fully set me up it is recommended looking at the categories below.
 
 Click on __**Select Category**__ below to get started. 
-<:blank:1008721958210383902> <:arrow:1068604670764916876> If you got any doubts join us in our [Support Server](https://discord.gg/NxJzWWqhdQ) \:)
+<:blank:1008721958210383902> <:arrow:1068604670764916876> If you got any doubts contact me [Click Here](https://discord.com/invite/tnfGUABz3f) \:)
 `,
 			color: 0x2b2d31,
 			footer: {
-				text: "Pyrite",
+				text: "Faizur Util",
 				icon_url: interaction.client.user?.displayAvatarURL(),
 			},
 		});
