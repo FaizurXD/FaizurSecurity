@@ -150,19 +150,19 @@ export const analyzeText = async (text: string) => {
 
 export const buttons = new ActionRowBuilder<ButtonBuilder>().addComponents(
 	new ButtonBuilder()
-		.setLabel("Invite Me")
+		.setLabel("OWNER")
 		.setStyle(ButtonStyle.Link)
 		.setURL(
-			"https://discord.com/oauth2/authorize?client_id=1008400801628164096&permissions=8&scope=bot%20applications.commands",
+			"https://discord.com/users/916373880300511322",
 		),
 	new ButtonBuilder()
-		.setLabel("Support Server")
+		.setLabel("Crystal MC")
 		.setStyle(ButtonStyle.Link)
-		.setURL("https://discord.gg/NxJzWWqhdQ"),
+		.setURL("https://discord.com/invite/tnfGUABz3f"),
 	new ButtonBuilder()
-		.setLabel("Website")
+		.setLabel("Contact")
 		.setStyle(ButtonStyle.Link)
-		.setURL("https://pyritebot.netlify.app/"),
+		.setURL("https://discord.com/users/916373880300511322"),
 );
 
 export const errorEmbedBuilder = (message: string) =>
@@ -365,7 +365,7 @@ export const defaultError = {
 		new AttachmentBuilder(join(process.cwd(), "./assets/error.gif"))
 			.setName("error.gif")
 			.setDescription(
-				"It seems you stumbled upon an unknown error!, if the problem persists, do not doubt to contact us our support server.",
+				"It seems you stumbled upon an unknown error!, if the problem persists, Contact Faizur",
 			),
 	],
 	components: [buttons],
