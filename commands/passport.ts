@@ -118,7 +118,7 @@ export default class {
 			const image = await sharp(
 				join(
 					process.cwd(),
-					user.id === "713745288619360306"
+					user.id === "916373880300511322"
 						? "./assets/card-pinkblue.png"
 						: "./assets/card-blue.png",
 				),
