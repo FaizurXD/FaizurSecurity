@@ -11,32 +11,32 @@ export default class {
 		.setNameLocalizations({ "es-ES": "eliminar" })
 		.setDescription("Deletes a channel/role with the specified name")
 		.setDescriptionLocalizations({
-			"es-ES": "Elmina un canal/rol con el nombre especificado",
+			"es-ES": "....",
 		})
 		.setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
 		.addStringOption((option) =>
 			option
 				.setName("option")
-				.setNameLocalizations({ "es-ES": "opción" })
+				.setNameLocalizations({ "es-ES": "option" })
 				.setDescription("Select role, channel, or messages")
 				.setDescriptionLocalizations({
-					"es-ES": "Selecciona rol, canal, o mensajes",
+					"es-ES": "Select role channel or messages",
 				})
 				.setChoices(
 					{
 						name: "role",
 						value: "role",
-						name_localizations: { "es-ES": "rol" },
+						name_localizations: { "es-ES": "role" },
 					},
 					{
 						name: "channel",
 						value: "channel",
-						name_localizations: { "es-ES": "canal" },
+						name_localizations: { "es-ES": "channel" },
 					},
 					{
 						name: "messages",
 						value: "messages",
-						name_localizations: { "es-ES": "mensajes" },
+						name_localizations: { "es-ES": "messages" },
 					},
 				)
 				.setRequired(true),
@@ -44,25 +44,25 @@ export default class {
 		.addStringOption((option) =>
 			option
 				.setName("name")
-				.setNameLocalizations({ "es-ES": "nombre" })
+				.setNameLocalizations({ "es-ES": "name" })
 				.setDescription(
 					"Pass the name of the channels/roles you want to delete (only for channels/roles)",
 				)
 				.setDescriptionLocalizations({
 					"es-ES":
-						"Pasa el nombre de los canales/roles que quieres borrar (solo para canales o roles)",
+						"Channels/roles name",
 				}),
 		)
 		.addIntegerOption((amount) =>
 			amount
 				.setName("amount")
-				.setNameLocalizations({ "es-ES": "cantidad" })
+				.setNameLocalizations({ "es-ES": "amount" })
 				.setDescription(
 					"You can pass an integer up to 100 (only for messages).",
 				)
 				.setDescriptionLocalizations({
 					"es-ES":
-						"Puedes pasar un número entero hasta 100 (solo para mensajes).",
+						"max 100",
 				}),
 		);
 
