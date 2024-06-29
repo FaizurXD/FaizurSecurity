@@ -8,15 +8,15 @@ import { buttons, emojis } from "../utils.js";
 export default class {
 	data = new SlashCommandBuilder()
 		.setName("devs")
-		.setNameLocalizations({ "es-ES": "desarrolladores" })
-		.setDescription("The official bot developers.")
+		.setNameLocalizations({ "es-ES": "developers" })
+		.setDescription("The official bot developer")
 		.setDescriptionLocalizations({
-			"es-ES": "Los desarrolladores oficiales del bot.",
+			"es-ES": "developers",
 		});
 
 	async run(interaction: ChatInputCommandInteraction) {
-		const user1 = await interaction.client.users.fetch("807705107852558386");
-		const user2 = await interaction.client.users.fetch("713745288619360306");
+		const user1 = await interaction.client.users.fetch("916373880300511322");
+		const user2 = await interaction.client.users.fetch("916373880300511322");
 
 		const embed1 = new EmbedBuilder()
 			.setTitle(`${emojis.pyrite} ${user1?.tag}`)
@@ -24,7 +24,7 @@ export default class {
 			.setFields(
 				{
 					name: "ID",
-					value: `${emojis.reply1} \`807705107852558386\` `,
+					value: `${emojis.reply1} \`916373880300511322\` `,
 				},
 				{
 					name: "Role",
@@ -37,8 +37,8 @@ export default class {
 					}:F>`,
 				},
 				{
-					name: "Github",
-					value: `${emojis.reply1} **__https://github.com/angelnext__**`,
+					name: "Owner",
+					value: `${emojis.reply1} **__https://discord.com/users/916373880300511322__**`,
 				},
 			)
 			.setFooter({
@@ -53,7 +53,7 @@ export default class {
 			.setFields(
 				{
 					name: "ID",
-					value: `${emojis.reply1} \`713745288619360306\` `,
+					value: `${emojis.reply1} \`916373880300511322\` `,
 				},
 				{
 					name: "Role",
@@ -67,7 +67,7 @@ export default class {
 				},
 				{
 					name: "Github",
-					value: `${emojis.reply1} **__https://github.com/eldimindcrafter123__**`,
+					value: `${emojis.reply1} **__https://discord.com/users/916373880300511322__**`,
 				},
 			)
 			.setFooter({
