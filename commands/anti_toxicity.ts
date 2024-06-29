@@ -17,7 +17,7 @@ export default class {
 	data = new SlashCommandBuilder()
 		.setName("antitoxicity")
 		.setDescription(
-			"Add a toxicity filter to your server to keep a PG-13 environment.",
+			"Add a toxicity filter to your server to keep a peaceful environment.",
 		)
 		.setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
 		.addSubcommand((subcommand) =>
