@@ -15,6 +15,7 @@ export default class {
 		if (!guild?.antiLinks) return;
 		if (
 			message.content.includes("discord.gg/") ||
+			message.content.includes("dc.gg/") ||
 			message.content.includes("dsc.gg/") ||
 			message.content.includes("discord.com/invite/")
 		) {
