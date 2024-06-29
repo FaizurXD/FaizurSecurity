@@ -14,7 +14,7 @@ export default class {
 		switch (interaction.values[0]) {
 			case "start":
 				helpEmbed.setTitle(`${emojis.list}  Help`).setDescription(`
-Thanks for choosing Pyrite Bot, the future of Discord server security! 
+Thanks for choosing Faizur Util Bot, the future of Discord server security! 
 
 I'm gonna help you keep your server safe from any threats that try ruin your community. 
 
@@ -140,7 +140,7 @@ Click on __**Select Category**__ below to get started.
 					.setFields(
 						{
 							name: "</antiraid on:1022139621993365534>",
-							value: `${emojis.blank}${emojis.arrow} Turn on **Pyrite**'s anti raid system to keep your server safe`,
+							value: `${emojis.blank}${emojis.arrow} Turn on **Faizur Util**'s anti raid system to keep your server safe`,
 						},
 						{
 							name: "</antiraid off:1022139621993365534>",
@@ -148,7 +148,7 @@ Click on __**Select Category**__ below to get started.
 						},
 						{
 							name: "</lockdown on:1014153355330850855>",
-							value: `${emojis.blank}${emojis.arrow} __Only use this if theres a big raid.__ **Pyrite** will fully lockdown the entire server and make sure there's not a raid`,
+							value: `${emojis.blank}${emojis.arrow} __Only use this if theres a big raid.__ **Faizur Util** will fully lockdown the entire server and make sure there's not a raid`,
 						},
 						{
 							name: "</lockdown off:1014153355330850855>",
