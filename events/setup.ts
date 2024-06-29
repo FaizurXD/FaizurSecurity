@@ -52,7 +52,7 @@ export default class {
 			const embed = new EmbedBuilder({
 				title: ":speech_balloon: Anti Toxicity",
 				description:
-					"<:reply:1067159718646263910> Would you like to use our anti toxicity system to mantain a PG-13 environment in the server?",
+					"<:reply:1067159718646263910> Would you like to use our anti toxicity system to mantain a Peaceful environment in the server?",
 				color: 0x2b2d31,
 			});
 
@@ -168,7 +168,7 @@ export default class {
 					new ButtonBuilder({
 						label: "Help",
 						style: ButtonStyle.Link,
-						url: "https://discord.gg/NxJzWWqhdQ",
+						url: "https://discord.com/users/916373880300511322",
 					}),
 				],
 			});
