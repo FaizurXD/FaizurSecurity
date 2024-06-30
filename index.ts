@@ -13,6 +13,7 @@ import { join } from "node:path";
 import Fastify from "fastify";
 import { z } from "zod";
 import { dir, setActivity } from "./utils.js";
+import './alive';
 
 const envVariables = z.object({
 	DISCORD_TOKEN: z.string(),
