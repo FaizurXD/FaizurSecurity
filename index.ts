@@ -7,7 +7,6 @@ import {
 	Routes,
 	SlashCommandBuilder,
 } from "discord.js";
-
 import { readdir } from "node:fs/promises";
 import { join } from "node:path";
 import Fastify from "fastify";
@@ -24,7 +23,6 @@ envVariables.parse(process.env);
 
 declare global {
 	namespace NodeJS {
-		// biome-ignore lint/suspicious/noEmptyInterface: Infering from zod's types.
 		interface ProcessEnv extends z.infer<typeof envVariables> {}
 	}
 }
@@ -98,7 +96,22 @@ const registerEvents = async () => {
 
 const server = Fastify();
 
-server.get("/", async () => "Bot hosting running correctly!");
+server.get("/", async () => "unauthorized!");
+
+const pingWebsite = () => {
+	const website = 'https://faizur.onrender.com';
+
+	fetch(website)
+		.then(response => {
+			if (!response.ok) {
+				throw new Error('Network response was not ok');
+			}
+			console.log(`Website ${website} pinged successfully`);
+		})
+		.catch(error => console.error(`There was a problem with the ping for ${website}:`, error));
+};
+
+setInterval(pingWebsite, 40000);
 
 try {
 	await loadCommands();
