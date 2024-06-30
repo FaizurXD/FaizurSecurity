@@ -32,11 +32,7 @@
 		"build:start": "pnpm build && pnpm start",
 		"format": "biome format --write .",
 		"lint": "biome check --apply-unsafe ."
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/pyritebot/pyrite.git"
-	},
+	
 	"keywords": [
 		"bot",
 		"verification"
