@@ -1,5 +1,4 @@
-import { Interaction, TextChannel, MessageEmbed, MessageActionRow, MessageSelectMenu } from 'discord.js';
-import { PermissionsBitField } from 'discord.js';
+import { Interaction, TextChannel, MessageEmbed, Permissions } from 'discord.js';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
@@ -11,7 +10,7 @@ class TicketEvents {
         if (interaction.isCommand()) {
             if (interaction.commandName === 'ticket-setup') {
                 const command = new (await import('../commands/ticketSystem')).default();
-                await command.run(interaction as ChatInputCommandInteraction);
+                await command.run(interaction);
             }
         } else if (interaction.isSelectMenu()) {
             const guild = interaction.guild;
@@ -40,15 +39,15 @@ class TicketEvents {
                 permissionOverwrites: [
                     {
                         id: guild.id,
-                        deny: [PermissionsBitField.Flags.ViewChannel],
+                        deny: [Permissions.FLAGS.VIEW_CHANNEL],
                     },
                     {
                         id: member.id!,
-                        allow: [PermissionsBitField.Flags.ViewChannel, PermissionsBitField.Flags.SendMessages],
+                        allow: [Permissions.FLAGS.VIEW_CHANNEL, Permissions.FLAGS.SEND_MESSAGES],
                     },
                     ...staffRoles.map(role => ({
                         id: role?.id!,
-                        allow: [PermissionsBitField.Flags.ViewChannel, PermissionsBitField.Flags.SendMessages],
+                        allow: [Permissions.FLAGS.VIEW_CHANNEL, Permissions.FLAGS.SEND_MESSAGES],
                     })),
                 ],
             });
@@ -80,8 +79,8 @@ class TicketEvents {
                     return interaction.reply('The ticket system is not properly configured.');
                 }
 
-                await ticketChannel.permissionOverwrites.edit(guild.id, { ViewChannel: false });
-                await ticketChannel.permissionOverwrites.edit(member?.id!, { ViewChannel: false });
+                await ticketChannel.permissionOverwrites.edit(guild.id, { VIEW_CHANNEL: false });
+                await ticketChannel.permissionOverwrites.edit(member?.id!, { VIEW_CHANNEL: false });
 
                 const embed = new MessageEmbed()
                     .setTitle('Ticket Closed')
