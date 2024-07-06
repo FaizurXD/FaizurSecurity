@@ -27,15 +27,11 @@ model Guild {
   antiAlts            Boolean  @default(false)
   spamMinutes         Int      @default(5)
   spamMessageLimit    Int      @default(7)
-  warns               Warn[] 
-  staffRoles          String[]
-  ticketCategory      String?
-  ticketLogChannel    String?
-  ticketChannel       String?
-  ticketReasons       String[]
+	warns               Warn[] 
 
   @@map("guilds")
 }
+
 
 model User {
   id       String @id @default(auto()) @map("_id") @db.ObjectId
@@ -47,14 +43,14 @@ model User {
 }
 
 model Warn {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+	id        String   @id @default(auto()) @map("_id") @db.ObjectId
   reason    String
-  userId    String
-  guildId   String
-  user      User     @relation(fields: [userId], references: [user])
-  guild     Guild    @relation(fields: [guildId], references: [guild])
+	userId    String
+	guildId   String
+	user      User     @relation(fields: [userId], references: [user])
+	guild     Guild    @relation(fields: [guildId], references: [guild])
   createdAt DateTime @default(now())
 
-  @@unique([userId, guildId])
-  @@map("warnings")
+	@@unique([userId, guildId])
+	@@map("warnings")
 }
